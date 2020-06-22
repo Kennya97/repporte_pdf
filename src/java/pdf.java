@@ -31,7 +31,7 @@ Statement st= null;
 ResultSet rs = null;
 
 Class.forName("com.mysql.jdbc.Driver");
-con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_inventario", "root",  " ");
+con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_inventario", "root",  "");
 st = con.createStatement();
 rs= st.executeQuery("select * from  tb_categoria");
 
@@ -57,7 +57,7 @@ Do.add(p1);
 
 Paragraph p2 = new Paragraph();
 Font font_parrafo = new Font(Font.FontFamily.TIMES_ROMAN, 14,Font.NORMAL, BaseColor.BLACK);
-Do.add(new Phrase("Esto es un ejemplo de pdf de la tabla categoria",font_parrafo));
+Do.add(new Phrase("Esto es un ejemplo de reporte pdf de la tabla categoria de mi base de dato bd_inventario",font_parrafo));
 p2.setAlignment(Element.ALIGN_JUSTIFIED);
 p2.add(new Phrase(Chunk.NEWLINE));
 p2.add(new Phrase(Chunk.NEWLINE));
